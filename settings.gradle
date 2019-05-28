@@ -1,1 +1,1 @@
-include ':busybox', ':http', ':ui', ':base', ':utils', ':plugin', ':sample', ':meet', ':face'
+include ':busybox', ':http', ':ui', ':base', ':utils', ':plugin', ':sample', ':meet', ':share'

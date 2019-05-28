@@ -6,6 +6,5 @@ import com.bigoat.base.Config;
 public class MeetApplication extends BaseApplication {
     @Override
     public void myCreate(Config config) {
-
     }
 }
