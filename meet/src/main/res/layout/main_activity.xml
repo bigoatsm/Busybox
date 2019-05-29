@@ -42,6 +42,20 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.9" />
 
+        <TextView
+            android:id="@+id/msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/register_prompt"
+            android:textColor="#FFCF6B"
+            android:textSize="38sp"
+            android:layout_marginBottom="100dp"
+            app:layout_constraintLeft_toLeftOf="@id/leftLine"
+            app:layout_constraintRight_toRightOf="@id/rightLine"
+            app:layout_constraintBottom_toTopOf="@id/address"
+            />
+
         <EditText
             android:id="@+id/address"
             style="@style/MainInput"
@@ -76,11 +90,10 @@
             app:layout_constraintRight_toRightOf="@id/rightLine"/>
 
         <Button
+            android:id="@+id/sure"
             style="@style/BaseSure"
             android:text="确 定"
-            android:textColor="@drawable/base_sure_btn"
             android:layout_marginTop="100dp"
-            android:enabled="false"
             app:layout_constraintTop_toBottomOf="@id/registerCode"
             app:layout_constraintLeft_toLeftOf="@id/registerCode"
             app:layout_constraintRight_toRightOf="@id/registerCode"

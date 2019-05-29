@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Meet</string>
+
+    <!-- Main -->
+    <string name="register_prompt">"注册流程\n\n"
+                    "1. 先登录资金及消费系统管理后台\n\n"
+                    "2. 点击[基础数据配置] > [终端管理]\n\n"
+                    "3. 找到当前终端机对应注册码输入\n\n"
+                    "4. 如无注册码则先在后台添加设备\n\n"</string>
 </resources>
