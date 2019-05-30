@@ -1,4 +1,14 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.9.1'
+    }
+}
 
 android {
     compileSdkVersion 28
@@ -37,4 +47,13 @@ dependencies {
 
     implementation 'com.squareup.okhttp3:okhttp:3.12.0'
 
+}
+
+publish {
+    userOrg = 'bigoat'
+    groupId = 'com.bigoat'
+    artifactId = 'http'
+    publishVersion = '0.0.1'
+    desc = 'This is android base'
+    website = 'https://github.com/bigoatsm/AndroidArch'
 }

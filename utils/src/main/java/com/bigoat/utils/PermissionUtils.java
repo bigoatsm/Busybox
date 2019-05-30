@@ -30,7 +30,6 @@ import java.util.Set;
  *     desc  : utils about permission
  * </pre>
  */
-@Deprecated
 public final class PermissionUtils {
 
     private static final List<String> PERMISSIONS = getPermissions();

@@ -1,0 +1,14 @@
+apply plugin: 'maven'
+apply plugin: 'com.novoda.bintray-release'
+
+// ./gradlew clean build bintrayUpload -PbintrayUser=bigoat -PbintrayKey=03eec37cffe6790b5462501e874e89e9dc70820c -PdryRun=false
+// ./gradlew bintrayUpload -PbintrayUser=bigoat -PbintrayKey=03eec37cffe6790b5462501e874e89e9dc70820c -PdryRun=false
+publish {
+    repoName = 'maven'          //远程仓库名字,不指明，默认是上传到maven
+    userOrg = 'bigoat'       //bintray.com用户名
+    groupId = 'cc.bigoat'       //jcenter上的路径,bintray上创建Package时填写的Version control项
+    artifactId = 'utils'      //项目名称，bintray上创建Package时填写的Name项
+    publishVersion = '0.0.1'    //版本号
+    desc = 'This is my android plugin utils.'      //描述，不重要
+    website = 'https://blog.bigoat.com/'     //网站，最好有，不重要
+}

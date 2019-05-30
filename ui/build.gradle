@@ -1,4 +1,14 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.9.1'
+    }
+}
 
 android {
     compileSdkVersion 28
@@ -34,4 +44,13 @@ dependencies {
 
     api 'com.android.support:cardview-v7:28.0.0'
     api 'com.android.support:recyclerview-v7:28.0.0'
+}
+
+publish {
+    userOrg = 'bigoat'
+    groupId = 'com.bigoat'
+    artifactId = 'ui'
+    publishVersion = '0.0.1'
+    desc = 'This is android ui'
+    website = 'https://github.com/bigoatsm/AndroidArch'
 }

@@ -1,8 +1,17 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.9.1'
+    }
+}
 
 android {
     compileSdkVersion 28
-
 
     defaultConfig {
         minSdkVersion 19
@@ -32,4 +41,13 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     implementation 'com.google.code.gson:gson:2.8.5'
+}
+
+publish {
+    userOrg = 'bigoat'
+    groupId = 'com.bigoat'
+    artifactId = 'utils'
+    publishVersion = '0.0.3'
+    desc = 'This is android utils'
+    website = 'https://github.com/bigoatsm/AndroidArch'
 }

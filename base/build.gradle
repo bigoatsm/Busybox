@@ -1,4 +1,14 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.9.1'
+    }
+}
 
 android {
     compileSdkVersion 28
@@ -36,4 +46,13 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     implementation 'android.arch.lifecycle:extensions:1.1.1'
+}
+
+publish {
+    userOrg = 'bigoat'
+    groupId = 'com.bigoat'
+    artifactId = 'base'
+    publishVersion = '0.0.1'
+    desc = 'This is android base'
+    website = 'https://github.com/bigoatsm/AndroidArch'
 }
